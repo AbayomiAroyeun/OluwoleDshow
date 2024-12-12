@@ -22,6 +22,7 @@ header {
     background-color: #333;
     color: white;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 #head1 img {
@@ -32,7 +33,7 @@ header {
 #ceo-text {
     font-size: 16px;
     font-weight: bold;
-    color: #ff9900;
+    color: #00ff3c;
 }
 
 /* Animation for Header Text */
@@ -57,7 +58,6 @@ header {
 /* Navbar Styling */
 #navbar {
     background-color: #444;
-    position: relative;
 }
 
 #menu-items {
@@ -66,6 +66,7 @@ header {
     margin: 0;
     padding: 10px;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 #menu-items li {
@@ -81,42 +82,6 @@ header {
 #menu-items a:hover {
     background-color: #ff9900;
     color: black;
-}
-
-/* Hamburger Menu */
-#hamburger-menu {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    z-index: 2;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    #menu-items {
-        transition: max-height 0.3s ease-in-out;
-        max-height: 0; /* Initially hidden */
-        overflow: hidden; /* Prevent content overflow */
-    }
-
-    #menu-items li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    #hamburger-menu {
-        display: block; /* Show hamburger menu on smaller screens */
-    }
-
-    #menu-items.show {
-        max-height: 500px; /* Adjust based on content size */
-    }
 }
 
 /* Main Content */
@@ -150,6 +115,14 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
 footer a {
     color: white;
     text-decoration: none;
@@ -163,6 +136,7 @@ footer a:hover {
     background-color: white;
     color: #333;
 }
+
 
 
 
