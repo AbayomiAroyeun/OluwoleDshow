@@ -33,7 +33,7 @@ header {
 #ceo-text {
     font-size: 16px;
     font-weight: bold;
-    color: #00ff3c;
+    color: #2fff00;
 }
 
 /* Animation for Header Text */
@@ -66,7 +66,7 @@ header {
     margin: 0;
     padding: 10px;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
 }
 
 #menu-items li {
@@ -84,6 +84,14 @@ header {
     color: black;
 }
 
+/* Make Navbar Adapt to Small Screens */
+@media (max-width: 600px) {
+    #menu-items {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;   /* Center items */
+    }
+}
+
 /* Main Content */
 .content {
     display: flex;
@@ -97,7 +105,7 @@ header {
     padding: 20px;
     background-color: white;
     margin-right: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px red;
 }
 
 .right-columns {
@@ -111,8 +119,31 @@ header {
     flex: 1;
     min-width: 200px;
     padding: 20px;
+    background-size: cover; /* Ensures the background image covers the entire column */
+    background-position: center; /* Centers the image */
     background-color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds text shadow for better readability */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Specific Backgrounds for Each Column */
+.buy {
+    background-image: url('image1.jpg'); /* Replace with the actual URL or path of the Buy background image */
+}
+
+.sell {
+    background-image: url('image2.jpg'); /* Replace with the actual URL or path of the Sell background image */
+}
+
+.rent {
+    background-image: url('image3.jpg'); /* Replace with the actual URL or path of the Rent background image */
+}
+
+.manage {
+    background-image: url('image4.jpg'); /* Replace with the actual URL or path of the Manage background image */
+}
+
+.colum-text{
+    color: hsl(0, 100%, 50%);
 }
 
 /* Footer */
@@ -136,6 +167,7 @@ footer a:hover {
     background-color: white;
     color: #333;
 }
+
 
 
 
