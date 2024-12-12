@@ -1,182 +1,131 @@
-body{background-color: blue;
+/* Global Reset */
+body {
     margin: 0;
     padding: 0;
-}
-    @keyframes fadeInSlide {
-        0% {
-            opacity: 0;
-            transform: translateX(-100%);
-            color: blue;
-        }
-        50% {
-            opacity: 0.5;
-            transform: translateX(20%);
-            color: orange;
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-            color: rgb(230, 6, 6);
-        }
-    }
-    
-    .animated-text {
-        animation: fadeInSlide 6s ease-in-out; /* Animation name, duration, and timing function */
-        font-size: 35px;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    
-    #div1 {
-        display: flex; /* Arrange child elements in a row */
-        flex-wrap: wrap; /* Allow wrapping if the screen size is small */
-        justify-content: space-between; /* Space out elements */
-        width: 100%;
-        margin: 5px; /* Center the div horizontally */
-
-
-    }
-    #head1 {
-        height: 150px;
-        width: 6%; /* Allocate 5% width for the first section */
-        margin-top: 10px;
-        margin-left: 15px;
-        margin-right: 65px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center image and text vertically */
-    }
-
-    #head1 img {
-        max-width: 80px; /* Adjust image size */
-        height: auto;
-    }
-
-
-  
-#head2 {
-    #head2 {
-        flex: 2; /* Take more space compared to head3 */
-        text-align: center; /* Center-align text */
-        margin-left: 40px;
-        padding: 10px 20px;
-        margin: 0 10px; /* Add space on left and right */
-        white-space: nowrap; /* Prevent text wrapping */
-        overflow: hidden; /* Hide any overflow text */
-        text-overflow: ellipsis; /* Add ellipsis if text overflows */
-        
-    }
-
-}
-#head3 {
-    flex: 1; /* Smaller space allocation */
-    text-align: right; /* Align text to the right */
-    margin-right: 40px;
-}
-    #ceo-text{
-        margin: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        font-size: x-large;
-        color: red;
-    }
-    #font1{
-        text-size-adjust: 37px;
-        color: greenyellow;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    /* Navigation Bar */
-#navbar {
-    
-    background-color: #333; /* Dark background for the navbar */
-    overflow: hidden; /* Ensure no content overflows */
-    border-radius: 5px; /* Optional: Rounded edges */
-    margin: 10px 0; /* Add spacing around the navbar */
-}
-
-#navbar ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 20;
-    padding: 15;
-    display: flex; /* Arrange items in a row */
-    justify-content: space-around; /* Evenly distribute menu items */
-}
-
-#navbar li {
-    flex: 1; /* Make each menu item take equal space */
-    text-align: center; /* Center the text */
-}
-
-#navbar a {
-    display: block; /* Allow the entire area to be clickable */
-    color: white; /* White text for contrast */
-    text-decoration: none; /* Remove underlines */
-    padding: 10px 15px; /* Add padding inside each link */
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#navbar a:hover {
-    background-color: #ff9900; /* Orange highlight on hover */
-    color: #000; /* Black text on hover */
-}
-
-/* Styling for Div3 */
-#div3 {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.background-images {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('image1.jpg'), url('image2.jpg'), url('image3.jpg'), url('image4.jpg');
-    background-size: 25% 100%;
-    background-repeat: no-repeat;
-    background-position: 15%, 42%, 75%, 100%;
-    z-index: -1;
-}
-
-.content-columns {
-    display: flex;
-    gap: 20px;
-    width: 90%;
-    justify-content: space-around;
-    z-index: 1;
-}
-
-.column {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 1;
-    text-align: center;
-}
-
-.column h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: blue;
     color: #333;
 }
 
-.column ul {
-    list-style-type: none;
-    padding: 0;
+/* Container */
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.column ul li {
-    margin: 5px 0;
-    font-size: 14px;
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
 }
+
+#head1 img {
+    max-width: 80px;
+    height: auto;
+}
+
+#ceo-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+/* Animation for Header Text */
+.animated-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9900;
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Navbar */
+#navbar {
+    background-color: #444;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#navbar a:hover {
+    background-color: #ff9900;
+    color: black;
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: white;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-columns {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .right-columns {
+        flex-direction: column;
+    }
+}
+
 
